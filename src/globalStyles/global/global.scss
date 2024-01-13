@@ -1,0 +1,111 @@
+@import "../breakpoints/breakpoints.scss";
+
+:root {
+  font-family: "Kumbh Sans", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // PRIMARY COLORS
+  --orange: hsl(26, 100%, 55%);
+  --pale_orange: hsl(25, 100%, 94%);
+
+  --very_dark_blue: hsl(220, 13%, 13%);
+  --dark_grayish_blue: hsl(219, 9%, 45%);
+  --grayish_blue: hsl(220, 14%, 75%);
+  --light_grayish_blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%); //(with 75% opacity for lightbox background):
+
+  // FONT--SIZES
+  --fontSize_standard: 16px;
+  --fontSize_nav: var(--font_standard);
+  --fontSize_button: var(--font_standard);
+  --fontSize_price: 22px;
+
+  // FONTS--PRODUCT
+  --fontSize_company: 17px; // wide
+  --fontColor_company: var(--orange); // wide
+  --fontWeight_company: 700; // wide
+  --fontSize_company_mobile: 15px; // mobile
+  --fontColor_company_mobile: var(--orange); // mobile
+  --fontWeight_company_mobile: 700; // mobile
+
+  --fontSize_product-title: 40px; // wide
+  --fontWeight_product-title: 700; // wide
+  --fontSize_product-title_mobile: 27px; // mobile
+  --fontWeight_product-title_mobile: 700; // mobile
+
+  --fontSize_description: 16px;
+  --fontColor_description: var(--dark_grayish_blue);
+
+  --fontSize_price: 28px;
+  --fontWeight_price: var(--fontWeight_700);
+  --fontSize_discount: 16px;
+  --fontWeight_discount: var(--fontWeight_700);
+
+  --fontSize_formerPrice: 15px;
+  --fontWeight_formerPrice: var(--fontWeight_700);
+
+  --fontSize_counter: 13px;
+  --fontWeight_counter: var(--fontWeight_700);
+
+  --fontSize_cartButton: 13px;
+  --fontWeight_counter: var(--fontWeight_700);
+
+  // FONT--WEIGHT
+  --fontWeight_sideMenu: 700;
+  --fontWeight_400: 400;
+  --fontWeight_700: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // no font-size inflation on safari in landscape mode
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-width: 375px;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(0, 0, 0, 0.448);
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
