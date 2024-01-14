@@ -1,0 +1,121 @@
+:root {
+  font-family: "Kumbh Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --orange: hsl(26, 100%, 55%);
+  --pale_orange: hsl(25, 100%, 94%);
+  --very_dark_blue: hsl(220, 13%, 13%);
+  --dark_grayish_blue: hsl(219, 9%, 45%);
+  --grayish_blue: hsl(220, 14%, 75%);
+  --light_grayish_blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --fontSize_standard: 1.6rem;
+  --fontSize_nav: var(--font_standard);
+  --fontSize_button: var(--font_standard);
+  --fontSize_price: 22px;
+  --fontSize_company: 1.7rem;
+  --fontColor_company: var(--orange);
+  --fontWeight_company: 700;
+  --fontSize_company_mobile: 15px;
+  --fontColor_company_mobile: var(--orange);
+  --fontWeight_company_mobile: 700;
+  --fontSize_product-title: 4rem;
+  --fontWeight_product-title: 700;
+  --fontSize_product-title_mobile: 2.5rem;
+  --fontWeight_product-title_mobile: 700;
+  --fontSize_description: 16px;
+  --fontColor_description: var(--dark_grayish_blue);
+  --fontSize_price: 28px;
+  --fontWeight_price: var(--fontWeight_700);
+  --fontSize_discount: 16px;
+  --fontWeight_discount: var(--fontWeight_700);
+  --fontSize_formerPrice: 15px;
+  --fontWeight_formerPrice: var(--fontWeight_700);
+  --fontSize_counter: 13px;
+  --fontWeight_counter: var(--fontWeight_700);
+  --fontSize_cartButton: 13px;
+  --fontWeight_counter: var(--fontWeight_700);
+  --fontWeight_sideMenu: 700;
+  --fontWeight_400: 400;
+  --fontWeight_700: 700;
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 5vw, 36rem);
+  --space-3xs: clamp(0.25rem, 0.1786rem + 0.3571vw, 0.5rem);
+  --space-2xs: clamp(0.5rem, 0.375rem + 0.625vw, 0.9375rem);
+  --space-xs: clamp(0.75rem, 0.5536rem + 0.9821vw, 1.4375rem);
+  --space-s: clamp(1rem, 0.75rem + 1.25vw, 1.875rem);
+  --space-m: clamp(1.5rem, 1.125rem + 1.875vw, 2.8125rem);
+  --space-l: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  --space-xl: clamp(3rem, 2.25rem + 3.75vw, 5.625rem);
+  --space-2xl: clamp(4rem, 3rem + 5vw, 7.5rem);
+  --space-3xl: clamp(6rem, 4.5rem + 7.5vw, 11.25rem);
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.0536rem + 0.9821vw, 0.9375rem);
+  --space-2xs-xs: clamp(0.5rem, 0.2321rem + 1.3393vw, 1.4375rem);
+  --space-xs-s: clamp(0.75rem, 0.4286rem + 1.6071vw, 1.875rem);
+  --space-s-m: clamp(1rem, 0.4821rem + 2.5893vw, 2.8125rem);
+  --space-m-l: clamp(1.5rem, 0.8571rem + 3.2143vw, 3.75rem);
+  --space-l-xl: clamp(2rem, 0.9643rem + 5.1786vw, 5.625rem);
+  --space-xl-2xl: clamp(3rem, 1.7143rem + 6.4286vw, 7.5rem);
+  --space-2xl-3xl: clamp(4rem, 1.9286rem + 10.3571vw, 11.25rem);
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem);
+  --grid-max-width: 116.25rem;
+  --grid-gutter: var(--space-s-l, clamp(1rem, 0.4286rem + 2.8571vw, 3.75rem));
+  --grid-columns: 12;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(0, 0, 0, 0.778);
+  font-size: var(--fontSize_standard);
+  color: black;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}/*# sourceMappingURL=global.css.map */

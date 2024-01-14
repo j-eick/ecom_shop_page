@@ -1,4 +1,4 @@
-@import "../breakpoints/breakpoints.scss";
+@import "../utils/breakpoints/breakpoints.scss";
 
 :root {
   font-family: "Kumbh Sans", sans-serif;
@@ -20,22 +20,22 @@
   --black: hsl(0, 0%, 0%); //(with 75% opacity for lightbox background):
 
   // FONT--SIZES
-  --fontSize_standard: 16px;
+  --fontSize_standard: 1.6rem;
   --fontSize_nav: var(--font_standard);
   --fontSize_button: var(--font_standard);
   --fontSize_price: 22px;
 
   // FONTS--PRODUCT
-  --fontSize_company: 17px; // wide
+  --fontSize_company: 1.7rem; // wide
   --fontColor_company: var(--orange); // wide
   --fontWeight_company: 700; // wide
   --fontSize_company_mobile: 15px; // mobile
   --fontColor_company_mobile: var(--orange); // mobile
   --fontWeight_company_mobile: 700; // mobile
 
-  --fontSize_product-title: 40px; // wide
+  --fontSize_product-title: 4rem; // wide
   --fontWeight_product-title: 700; // wide
-  --fontSize_product-title_mobile: 27px; // mobile
+  --fontSize_product-title_mobile: 2.5rem; // mobile
   --fontWeight_product-title_mobile: 700; // mobile
 
   --fontSize_description: 16px;
@@ -59,6 +59,36 @@
   --fontWeight_sideMenu: 700;
   --fontWeight_400: 400;
   --fontWeight_700: 700;
+
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 5vw, 36rem);
+
+  --space-3xs: clamp(0.25rem, 0.1786rem + 0.3571vw, 0.5rem);
+  --space-2xs: clamp(0.5rem, 0.375rem + 0.625vw, 0.9375rem);
+  --space-xs: clamp(0.75rem, 0.5536rem + 0.9821vw, 1.4375rem);
+  --space-s: clamp(1rem, 0.75rem + 1.25vw, 1.875rem);
+  --space-m: clamp(1.5rem, 1.125rem + 1.875vw, 2.8125rem);
+  --space-l: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  --space-xl: clamp(3rem, 2.25rem + 3.75vw, 5.625rem);
+  --space-2xl: clamp(4rem, 3rem + 5vw, 7.5rem);
+  --space-3xl: clamp(6rem, 4.5rem + 7.5vw, 11.25rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.0536rem + 0.9821vw, 0.9375rem);
+  --space-2xs-xs: clamp(0.5rem, 0.2321rem + 1.3393vw, 1.4375rem);
+  --space-xs-s: clamp(0.75rem, 0.4286rem + 1.6071vw, 1.875rem);
+  --space-s-m: clamp(1rem, 0.4821rem + 2.5893vw, 2.8125rem);
+  --space-m-l: clamp(1.5rem, 0.8571rem + 3.2143vw, 3.75rem);
+  --space-l-xl: clamp(2rem, 0.9643rem + 5.1786vw, 5.625rem);
+  --space-xl-2xl: clamp(3rem, 1.7143rem + 6.4286vw, 7.5rem);
+  --space-2xl-3xl: clamp(4rem, 1.9286rem + 10.3571vw, 11.25rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem);
+
+  --grid-max-width: 116.25rem;
+  --grid-gutter: var(--space-s-l, clamp(1rem, 0.4286rem + 2.8571vw, 3.75rem));
+  --grid-columns: 12;
 }
 
 *,
@@ -74,14 +104,18 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+
+  font-size: 62.5%;
 }
 
 body {
-  min-width: 375px;
+  min-width: 320px;
   min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: rgba(0, 0, 0, 0.448);
+  background-color: rgba(0, 0, 0, 0.778);
+  font-size: var(--fontSize_standard);
+  color: black;
 }
 
 a:not([class]) {

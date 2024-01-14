@@ -1,0 +1,129 @@
+.company {
+  font-weight: var(--fontWeight_company);
+  color: var(--fontColor_company);
+
+  // @include mobile {
+  //   margin-top: 20px;
+  //   font-size: var(--fontSize_company_mobile);
+  // }
+  // @include wide {
+  //   margin-top: 80px;
+  //   font-size: var(--fontSize_company);
+  // }
+}
+
+.title {
+  font-size: var(--fontSize_product-title_mobile);
+  // @include mobile {
+  //   margin-top: 10px;
+  //   font-size: var(--fontSize_product-title_mobile);
+  //   font-weight: var(--fontWeight_product-title);
+  // }
+  // @include wide {
+  //   margin-top: 20px;
+  //   font-size: var(--fontSize_product-title);
+  //   font-weight: var(--fontWeight_product-title);
+  // }
+}
+
+.desciption {
+  margin-top: 20px;
+
+  font-size: var(--fontSize_description);
+  color: var(--fontColor_description);
+  line-height: 1.6;
+}
+
+.priceContainer {
+  margin-top: 20px;
+
+  font-size: var(--fontSize_price);
+  font-weight: var(--fontWeight_price);
+
+  // @include mobile {
+  //   display: flex;
+  //   align-items: center;
+  //   // grid-template-columns: repeat(10, 1fr);
+  //   grid-template-rows: repeat(2, 1fr);
+  // }
+  // @include wide {
+  //   display: grid;
+  //   align-items: center;
+  //   grid-template-columns: repeat(8, 1fr);
+  //   grid-template-rows: repeat(2, 1fr);
+  //   grid-template-areas:
+  //     "price price discount discount discount discount discount discount"
+  //     "formerPrice formerPrice formerPrice formerPrice formerPrice formerPrice formerPrice formerPrice";
+  // }
+
+  .price {
+    // @include mobile {
+    //   width: 33%;
+    //   grid-row: 1;
+    // }
+    // @include wide {
+    //   grid-area: price;
+    // }
+  }
+
+  .discount {
+    padding: 2px 8px;
+
+    background-color: var(--pale_orange);
+    border-radius: 7px;
+    font-size: var(--fontSize_discount);
+    color: var(--orange);
+
+    // @include mobile {
+    //   grid-row: 1;
+    // }
+    // @include wide {
+    //   grid-area: discount;
+    //   justify-self: start;
+    // }
+  }
+
+  .formerPrice {
+    font-size: var(--fontSize_formerPrice);
+    font-weight: var(--fontWeight_700);
+    color: var(--grayish_blue);
+
+    text-decoration: line-through;
+
+    // @include mobile {
+    //   width: calc(335px - 47px - 106px);
+    //   text-align: right;
+    // }
+    // @include wide {
+    //   grid-area: formerPrice;
+    //   justify-self: start;
+    //   text-align: left;
+    // }
+  }
+}
+
+.checkout {
+  margin-top: 25px;
+  margin-bottom: 50px;
+
+  display: flex;
+  gap: 15px;
+
+  .ulCounterContainer {
+    width: 130px;
+
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--light_grayish_blue);
+
+    border-radius: 7px;
+  }
+
+  .liCounter {
+    display: flex;
+    align-items: center;
+
+    font-size: var(--fontSize_counter);
+    font-weight: var(--fontWeight_counter);
+  }
+}

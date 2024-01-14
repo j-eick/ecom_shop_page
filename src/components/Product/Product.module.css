@@ -1,0 +1,54 @@
+.company {
+  font-weight: var(--fontWeight_company);
+  color: var(--fontColor_company);
+}
+
+.title {
+  font-size: var(--fontSize_product-title_mobile);
+}
+
+.desciption {
+  margin-top: 20px;
+  font-size: var(--fontSize_description);
+  color: var(--fontColor_description);
+  line-height: 1.6;
+}
+
+.priceContainer {
+  margin-top: 20px;
+  font-size: var(--fontSize_price);
+  font-weight: var(--fontWeight_price);
+}
+.priceContainer .discount {
+  padding: 2px 8px;
+  background-color: var(--pale_orange);
+  border-radius: 7px;
+  font-size: var(--fontSize_discount);
+  color: var(--orange);
+}
+.priceContainer .formerPrice {
+  font-size: var(--fontSize_formerPrice);
+  font-weight: var(--fontWeight_700);
+  color: var(--grayish_blue);
+  text-decoration: line-through;
+}
+
+.checkout {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: flex;
+  gap: 15px;
+}
+.checkout .ulCounterContainer {
+  width: 130px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--light_grayish_blue);
+  border-radius: 7px;
+}
+.checkout .liCounter {
+  display: flex;
+  align-items: center;
+  font-size: var(--fontSize_counter);
+  font-weight: var(--fontWeight_counter);
+}/*# sourceMappingURL=Product.module.css.map */

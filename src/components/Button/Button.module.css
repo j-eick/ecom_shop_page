@@ -1,0 +1,20 @@
+.buttonCounterAmount {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background-color: var(--light_grayish_blue);
+  border: none;
+}
+
+.addToCart {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--orange);
+  box-shadow: 0px 15px 30px -5px hsla(26, 100%, 55%, 0.5);
+  border: none;
+  border-radius: 7px;
+  color: var(--white);
+}/*# sourceMappingURL=Button.module.css.map */

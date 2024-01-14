@@ -1,0 +1,20 @@
+.header {
+  height: 5rem;
+
+  display: flex;
+  place-items: center;
+  border: 1px solid black;
+
+  @container (max-width: 500px) {
+  }
+
+  // @include mobile {
+  //   height: 70px;
+  //   border-bottom: none;
+  // }
+
+  // @include wide {
+  //   height: 110px;
+  //   border-bottom: 3px solid rgba(83, 83, 83, 0.1);
+  // }
+}
