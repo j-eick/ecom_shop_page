@@ -1,4 +1,10 @@
+.product {
+  padding: 0px 20px;
+  // padding: clamp();
+}
+
 .company {
+  font-size: var(--fontSize_company);
   font-weight: var(--fontWeight_company);
   color: var(--fontColor_company);
 
@@ -110,7 +116,8 @@
   gap: 15px;
 
   .ulCounterContainer {
-    width: 130px;
+    // correct this one !!!!
+    width: 70px;
 
     display: flex;
     justify-content: space-around;

@@ -3,12 +3,14 @@ import Caroussel from "./components/Caroussel/Caroussel";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Page from "./components/Page/Page";
-import Product from "./components/Product/Product";
-import productStyle from "./components/Product/Product.module.scss";
 import Image from "./components/Image/Image";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import Nav from "./components/Nav/Nav";
 import SideMenu from "./components/SideMenu/SideMenu";
+// Product Component + Styling
+import Product from "./components/Product/Product";
+import productStyle from "./components/Product/Product.module.scss";
+
 import { useState } from "react";
 
 function App() {
@@ -17,16 +19,18 @@ function App() {
   return (
     <Page>
       <Header>
-        <BurgerMenu onClick={() => {}} />
+        <BurgerMenu onClick={() => setIsSidemenuOpen(!isSidemenuOpen)} />
         <SideMenu isSideMenuOpen={isSidemenuOpen}>
-          <Nav />
+          sidemenu
+          {/* <Nav variant="mobile" /> */}
         </SideMenu>
+        {/* <Nav variant="non_mobile" /> */}
       </Header>
       <Main>
         <Caroussel>caroussel</Caroussel>
         <Product>
           {/* +++++  COMPANY NAME  +++++ */}
-          <div className={productStyle.company}>SNEAKER COMPANY</div>
+          <h1 className={productStyle.company}>SNEAKER COMPANY</h1>
 
           {/* +++++  PRODUCT TILE  +++++ */}
           <div className={productStyle.title}>

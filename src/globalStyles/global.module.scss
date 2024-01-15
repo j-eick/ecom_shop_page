@@ -2,7 +2,6 @@
 
 :root {
   font-family: "Kumbh Sans", sans-serif;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,13 +19,19 @@
   --black: hsl(0, 0%, 0%); //(with 75% opacity for lightbox background):
 
   // FONT--SIZES
-  --fontSize_standard: 1.6rem;
+  --fontSize_xs: var(--step-0);
+  --fontSize_s: var(--step-1);
+  --fontSize_m: var(--step-2);
+  --fontSize_l: var(--step-3);
+  --fontSize_xl: var(--step-4);
+  --fontSize_xxl: var(--step-5);
+
   --fontSize_nav: var(--font_standard);
   --fontSize_button: var(--font_standard);
   --fontSize_price: 22px;
 
   // FONTS--PRODUCT
-  --fontSize_company: 1.7rem; // wide
+  --fontSize_company: var(--fontSize_s); // wide
   --fontColor_company: var(--orange); // wide
   --fontWeight_company: 700; // wide
   --fontSize_company_mobile: 15px; // mobile
@@ -38,7 +43,7 @@
   --fontSize_product-title_mobile: 2.5rem; // mobile
   --fontWeight_product-title_mobile: 700; // mobile
 
-  --fontSize_description: 16px;
+  --fontSize_description: var(--fontSize_s);
   --fontColor_description: var(--dark_grayish_blue);
 
   --fontSize_price: 28px;
@@ -60,31 +65,40 @@
   --fontWeight_400: 400;
   --fontWeight_700: 700;
 
+  --step--2: clamp(0.6944rem, 0.5832rem + 0.5557vw, 1rem);
+  --step--1: clamp(0.8331rem, 0.6815rem + 0.758vw, 1.25rem);
+  --step-0: clamp(1rem, 0.7955rem + 1.0227vw, 1.5625rem);
+  --step-1: clamp(1.2rem, 0.9261rem + 1.3693vw, 1.9531rem);
+  --step-2: clamp(1.44rem, 1.0759rem + 1.8205vw, 2.4413rem);
+  --step-3: clamp(1.7281rem, 1.2468rem + 2.4068vw, 3.0519rem);
+  --step-4: clamp(2.0738rem, 1.4406rem + 3.1659vw, 3.815rem);
+  --step-5: clamp(2.4881rem, 1.659rem + 4.1455vw, 4.7681rem);
+
   --grid-placement: auto-fit;
   --grid-min-item-size: clamp(16rem, 5vw, 36rem);
 
-  --space-3xs: clamp(0.25rem, 0.1786rem + 0.3571vw, 0.5rem);
-  --space-2xs: clamp(0.5rem, 0.375rem + 0.625vw, 0.9375rem);
-  --space-xs: clamp(0.75rem, 0.5536rem + 0.9821vw, 1.4375rem);
-  --space-s: clamp(1rem, 0.75rem + 1.25vw, 1.875rem);
-  --space-m: clamp(1.5rem, 1.125rem + 1.875vw, 2.8125rem);
-  --space-l: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
-  --space-xl: clamp(3rem, 2.25rem + 3.75vw, 5.625rem);
-  --space-2xl: clamp(4rem, 3rem + 5vw, 7.5rem);
-  --space-3xl: clamp(6rem, 4.5rem + 7.5vw, 11.25rem);
+  --space-3xs: clamp(0.25rem, 0.1591rem + 0.4545vw, 0.5rem);
+  --space-2xs: clamp(0.5rem, 0.3409rem + 0.7955vw, 0.9375rem);
+  --space-xs: clamp(0.75rem, 0.5rem + 1.25vw, 1.4375rem);
+  --space-s: clamp(1rem, 0.6818rem + 1.5909vw, 1.875rem);
+  --space-m: clamp(1.5rem, 1.0227rem + 2.3864vw, 2.8125rem);
+  --space-l: clamp(2rem, 1.3636rem + 3.1818vw, 3.75rem);
+  --space-xl: clamp(3rem, 2.0455rem + 4.7727vw, 5.625rem);
+  --space-2xl: clamp(4rem, 2.7273rem + 6.3636vw, 7.5rem);
+  --space-3xl: clamp(6rem, 4.0909rem + 9.5455vw, 11.25rem);
 
   /* One-up pairs */
-  --space-3xs-2xs: clamp(0.25rem, 0.0536rem + 0.9821vw, 0.9375rem);
-  --space-2xs-xs: clamp(0.5rem, 0.2321rem + 1.3393vw, 1.4375rem);
-  --space-xs-s: clamp(0.75rem, 0.4286rem + 1.6071vw, 1.875rem);
-  --space-s-m: clamp(1rem, 0.4821rem + 2.5893vw, 2.8125rem);
-  --space-m-l: clamp(1.5rem, 0.8571rem + 3.2143vw, 3.75rem);
-  --space-l-xl: clamp(2rem, 0.9643rem + 5.1786vw, 5.625rem);
-  --space-xl-2xl: clamp(3rem, 1.7143rem + 6.4286vw, 7.5rem);
-  --space-2xl-3xl: clamp(4rem, 1.9286rem + 10.3571vw, 11.25rem);
+  --space-3xs-2xs: clamp(0.25rem, 0rem + 1.25vw, 0.9375rem);
+  --space-2xs-xs: clamp(0.5rem, 0.1591rem + 1.7045vw, 1.4375rem);
+  --space-xs-s: clamp(0.75rem, 0.3409rem + 2.0455vw, 1.875rem);
+  --space-s-m: clamp(1rem, 0.3409rem + 3.2955vw, 2.8125rem);
+  --space-m-l: clamp(1.5rem, 0.6818rem + 4.0909vw, 3.75rem);
+  --space-l-xl: clamp(2rem, 0.6818rem + 6.5909vw, 5.625rem);
+  --space-xl-2xl: clamp(3rem, 1.3636rem + 8.1818vw, 7.5rem);
+  --space-2xl-3xl: clamp(4rem, 1.3636rem + 13.1818vw, 11.25rem);
 
   /* Custom pairs */
-  --space-s-l: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem);
+  --space-s-l: clamp(1rem, 0rem + 5vw, 3.75rem);
 
   --grid-max-width: 116.25rem;
   --grid-gutter: var(--space-s-l, clamp(1rem, 0.4286rem + 2.8571vw, 3.75rem));
@@ -109,13 +123,16 @@ html {
 }
 
 body {
-  min-width: 320px;
   min-height: 100vh;
+  // padding: 20px 20px;
+  display: flex;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  background-color: rgba(0, 0, 0, 0.778);
-  font-size: var(--fontSize_standard);
+
+  font-size: var(--fontSize_s);
   color: black;
+  background-color: rgba(0, 0, 0, 0.778);
+
+  -webkit-font-smoothing: antialiased;
 }
 
 a:not([class]) {

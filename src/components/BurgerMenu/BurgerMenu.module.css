@@ -1,4 +1,5 @@
 .burgerMenu {
   display: flex;
   height: 15px;
+  cursor: pointer;
 }/*# sourceMappingURL=BurgerMenu.module.css.map */

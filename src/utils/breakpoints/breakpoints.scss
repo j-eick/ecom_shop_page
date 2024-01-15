@@ -12,19 +12,18 @@ $screen_wide_min1366: 1366px;
 //   }
 // }
 
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min576}) {
+    @content;
+  }
+}
 // Extra large devices
 @mixin wide {
   @media (min-width: #{$screen_wide_min1366}) {
     @content;
   }
 }
-
-// // Small devices
-// @mixin sm {
-//   @media (min-width: #{$screen-sm-min576}) {
-//     @content;
-//   }
-// }
 
 // // Medium devices
 // @mixin md {

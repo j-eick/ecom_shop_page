@@ -1,5 +1,14 @@
-.nav {
+@import "../../utils/breakpoints/breakpoints.scss";
+
+.mobile {
   width: 100%;
   display: flex;
-  place-items: center;
+
+  border: 1px solid red;
 }
+
+// .non_mobile {
+//   @include sm {
+//     display: none;
+//   }
+//}
