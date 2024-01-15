@@ -1,3 +1,4 @@
+import pageStyles from "./components/Page/Page.module.scss";
 import Button from "./components/Button/Button";
 import Caroussel from "./components/Caroussel/Caroussel";
 import Header from "./components/Header/Header";
@@ -16,15 +17,17 @@ import { useState } from "react";
 function App() {
   const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(false);
 
+  console.log(isSidemenuOpen);
+
   return (
     <Page>
+      {isSidemenuOpen && <span className={pageStyles.cover} />}
+      <SideMenu isSideMenuOpen={isSidemenuOpen}>
+        <Nav variant="mobile" isSidemenuOpen={isSidemenuOpen} />
+      </SideMenu>
       <Header>
         <BurgerMenu onClick={() => setIsSidemenuOpen(!isSidemenuOpen)} />
-        <SideMenu isSideMenuOpen={isSidemenuOpen}>
-          sidemenu
-          {/* <Nav variant="mobile" /> */}
-        </SideMenu>
-        {/* <Nav variant="non_mobile" /> */}
+        <Nav variant="non_mobile" isSidemenuOpen={isSidemenuOpen} />
       </Header>
       <Main>
         <Caroussel>caroussel</Caroussel>

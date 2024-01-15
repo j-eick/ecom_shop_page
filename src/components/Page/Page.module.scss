@@ -1,4 +1,23 @@
+// #root {
+//   height: 100%;
+//   width: 100%;
+//   background-color: red;
+// }
+
 .page {
+  position: relative;
   min-height: 100dvh;
-  background-color: var(--white);
+  background-color: var(--backgroundColor);
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .cover {
+    position: absolute;
+    z-index: 10;
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(48, 48, 48, 0.8);
+  }
 }

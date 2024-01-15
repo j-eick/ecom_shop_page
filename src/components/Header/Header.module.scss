@@ -1,12 +1,18 @@
+@import "../../utils/breakpoints/breakpoints.scss";
+
 .header {
-  height: 5rem;
+  height: 5.5rem;
 
   display: flex;
   place-items: center;
   border: 1px solid black;
 
-  @container (max-width: 500px) {
+  @include sm {
+    height: clamp(5.5rem, 10rem, 12rem);
   }
+
+  // @container (max-width: 500px) {
+  // }
 
   // @include mobile {
   //   height: 70px;

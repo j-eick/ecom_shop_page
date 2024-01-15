@@ -1,7 +1,11 @@
 .header {
-  height: 5rem;
+  height: 5.5rem;
   display: flex;
   place-items: center;
   border: 1px solid black;
 }
-@container (max-width: 500px) {}/*# sourceMappingURL=Header.module.css.map */
+@media (min-width: 576px) {
+  .header {
+    height: 10rem;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

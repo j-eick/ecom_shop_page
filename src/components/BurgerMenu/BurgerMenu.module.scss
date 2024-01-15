@@ -1,6 +1,12 @@
+@import "../../utils/breakpoints/breakpoints.scss";
+
 .burgerMenu {
   display: flex;
-  height: 15px;
+  height: 1.7rem;
 
   cursor: pointer;
+
+  @include sm {
+    display: none;
+  }
 }

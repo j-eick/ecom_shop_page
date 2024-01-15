@@ -1,5 +1,30 @@
-.mobile {
-  width: 100%;
-  display: flex;
-  border: 1px solid red;
+.navMobile {
+  height: 100%;
+  padding: 80px clamp(1.5rem, 3vw + 0.5rem, 3rem);
+  font-size: var(--step-2);
+  font-weight: var(--fontWeight-thick);
+  line-height: 2.5;
+}
+
+.navWide {
+  display: none;
+}
+@media (min-width: 576px) {
+  .navWide {
+    display: block;
+    font-size: var(--fontSize_s);
+    font-weight: var(--fontWeight-thin);
+  }
+}
+@media (min-width: 576px) {
+  .navWide .ul {
+    display: flex;
+    gap: clamp(1rem, 3vw, 5rem);
+  }
+}
+
+.open {
+  position: absolute;
+  z-index: 20;
+  background-color: var(--backgroundColor);
 }/*# sourceMappingURL=Nav.module.css.map */

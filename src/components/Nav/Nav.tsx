@@ -3,20 +3,25 @@ import navElems from "../../utils/nav.json";
 import classNames from "classnames";
 
 type NavProps = {
-  variant: string;
+  variant?: string;
+  isSidemenuOpen: boolean;
 };
 
-export default function Nav({ variant }: NavProps) {
+export default function Nav({ variant, isSidemenuOpen }: NavProps) {
   const classStyles = classNames({
-    [styles.mobile]: variant === "mobile",
-    [styles.non_mobile]: variant === "non_mobile",
+    // [styles.closed]: !isSidemenuOpen,
+    // [styles.open]: isSidemenuOpen,
+    [styles.navMobile]: variant === "mobile",
+    [styles.navWide]: variant === "non_mobile",
   });
 
   return (
     <nav className={classStyles}>
-      <ul>
+      <ul className={styles.ul}>
         {navElems.map((item, index) => (
-          <li key={index}>{item.category}</li>
+          <li className={styles.li} key={index}>
+            {item.category}
+          </li>
         ))}
       </ul>
     </nav>

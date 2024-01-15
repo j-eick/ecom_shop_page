@@ -1,1 +1,1 @@
-{"version":3,"sources":["BurgerMenu.module.scss","BurgerMenu.module.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,YAAA;EAEA,eAAA;ACAF","file":"BurgerMenu.module.css"}
+{"version":3,"sources":["BurgerMenu.module.scss","BurgerMenu.module.css","../../utils/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,cAAA;EAEA,eAAA;ACFF;ACYE;EFdF;IAOI,aAAA;ECDF;AACF","file":"BurgerMenu.module.css"}

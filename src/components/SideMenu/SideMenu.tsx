@@ -10,13 +10,13 @@ type sideMenuProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 export default function Sidemenu({ children, isSideMenuOpen }: sideMenuProps) {
-  const containerClasses = classNames(styles.sideMenu, {
-    [styles.close]: !isSideMenuOpen,
+  const styleClasses = classNames({
+    [styles.closed]: !isSideMenuOpen,
     [styles.open]: isSideMenuOpen,
   });
 
   return (
-    <div className={containerClasses} data-sidemenu={isSideMenuOpen}>
+    <div className={styleClasses} data-sidemenu={isSideMenuOpen}>
       {children}
     </div>
   );

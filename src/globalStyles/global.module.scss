@@ -15,7 +15,7 @@
   --dark_grayish_blue: hsl(219, 9%, 45%);
   --grayish_blue: hsl(220, 14%, 75%);
   --light_grayish_blue: hsl(223, 64%, 98%);
-  --white: hsl(0, 0%, 100%);
+  --backgroundColor: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%); //(with 75% opacity for lightbox background):
 
   // FONT--SIZES
@@ -25,6 +25,9 @@
   --fontSize_l: var(--step-3);
   --fontSize_xl: var(--step-4);
   --fontSize_xxl: var(--step-5);
+
+  --fontWeight-thin: 400;
+  --fontWeight-thick: 700;
 
   --fontSize_nav: var(--font_standard);
   --fontSize_button: var(--font_standard);

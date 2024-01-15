@@ -1,1 +1,1 @@
-{"version":3,"sources":["Nav.module.scss","Nav.module.css"],"names":[],"mappings":"AAEA;EACE,WAAA;EACA,aAAA;EAEA,qBAAA;ACFF","file":"Nav.module.css"}
+{"version":3,"sources":["Nav.module.scss","Nav.module.css","../../utils/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,+CAAA;EAEA,wBAAA;EACA,oCAAA;EACA,gBAAA;ACNF;;ADSA;EACE,aAAA;ACNF;ACME;EFDF;IAII,cAAA;IACA,4BAAA;IACA,mCAAA;ECLF;AACF;ACDE;EFQA;IAEI,aAAA;IACA,2BAAA;ECLJ;AACF;;ADSA;EACE,kBAAA;EACA,WAAA;EAEA,wCAAA;ACPF","file":"Nav.module.css"}
