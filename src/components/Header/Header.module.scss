@@ -1,14 +1,25 @@
 @import "../../utils/breakpoints/breakpoints.scss";
 
 .header {
-  height: 5.5rem;
+  position: relative;
+  height: clamp(5.5rem, 10vw, 10rem);
+  padding: 0 2rem;
 
   display: flex;
-  place-items: center;
+  align-items: center;
   border: 1px solid black;
 
-  @include sm {
-    height: clamp(5.5rem, 10rem, 12rem);
+  @include xs {
+    position: relative;
+    height: clamp(5.5rem, 10vw, 10rem);
+
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+  }
+
+  @include lg {
+    padding: 0 0;
   }
 
   // @container (max-width: 500px) {
@@ -23,4 +34,13 @@
   //   height: 110px;
   //   border-bottom: 3px solid rgba(83, 83, 83, 0.1);
   // }
+}
+
+.ul {
+  display: grid;
+  grid-template-columns: 10% 30% 10% 10%;
+
+  @include xs {
+    grid-template-columns: 10% 30% 50% 10% 10%;
+  }
 }
