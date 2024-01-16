@@ -50,7 +50,7 @@ function App() {
       </Header>
       {/* ##############   CONTENT   ################# */}
       <Main>
-        <Caroussel>caroussel</Caroussel>
+        <Caroussel />
         <Product>
           {/* +++++  COMPANY NAME  +++++ */}
           <h1 className={productStyle.company}>SNEAKER COMPANY</h1>

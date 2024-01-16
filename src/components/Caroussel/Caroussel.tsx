@@ -1,16 +1,22 @@
 // import Image from "../Image/Image";
-import { ReactNode } from "react";
 import styles from "./Caroussel.module.scss";
+import { useState } from "react";
 import Image from "../Image/Image";
 
-type CarousselProps = {
-  children: ReactNode;
-};
+// type CarousselProps = {
+//   children: ReactNode;
+// };
 
-export default function Caroussel({ children }: CarousselProps) {
+export default function Caroussel() {
+  const [currentImage, setCurrentImage] = useState();
+
   return (
     <div className={styles.caroussel}>
-      <Image variant="caroussel" src="/images/" alt="photo_caroussel" />
+      {/* <Image
+        variant="caroussel"
+        src="/images/prodPictures/image-product-1.jpg"
+        alt="photo_caroussel"
+      /> */}
     </div>
   );
 }
