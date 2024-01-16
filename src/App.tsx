@@ -22,11 +22,15 @@ function App() {
   console.log(isSidemenuOpen);
 
   return (
+    /**
+     * ##############   PAGE CONTAINER   #################
+     */
     <Page>
       {isSidemenuOpen && <span className={pageStyles.cover} />}
       <SideMenu isSideMenuOpen={isSidemenuOpen}>
         <Nav variant="mobile" />
       </SideMenu>
+      {/* ##############   HEADER   #################  */}
       <Header>
         <div className={BurgerMenuContainer.burgerContainer}>
           <BurgerMenu onClick={() => setIsSidemenuOpen(!isSidemenuOpen)} />
@@ -44,6 +48,7 @@ function App() {
           />
         </div>
       </Header>
+      {/* ##############   CONTENT   ################# */}
       <Main>
         <Caroussel>caroussel</Caroussel>
         <Product>
