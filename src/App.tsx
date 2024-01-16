@@ -5,7 +5,9 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Page from "./components/Page/Page";
 import Image from "./components/Image/Image";
+import imageStyles from "./components/Image/Image.module.scss";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
+import BurgerMenuContainer from "./components/BurgerMenu/BurgerMenu.module.scss";
 import Nav from "./components/Nav/Nav";
 import SideMenu from "./components/SideMenu/SideMenu";
 // Product Component + Styling
@@ -23,11 +25,24 @@ function App() {
     <Page>
       {isSidemenuOpen && <span className={pageStyles.cover} />}
       <SideMenu isSideMenuOpen={isSidemenuOpen}>
-        <Nav variant="mobile" isSidemenuOpen={isSidemenuOpen} />
+        <Nav variant="mobile" />
       </SideMenu>
       <Header>
-        <BurgerMenu onClick={() => setIsSidemenuOpen(!isSidemenuOpen)} />
-        <Nav variant="non_mobile" isSidemenuOpen={isSidemenuOpen} />
+        <div className={BurgerMenuContainer.burgerContainer}>
+          <BurgerMenu onClick={() => setIsSidemenuOpen(!isSidemenuOpen)} />
+        </div>
+        <div className={imageStyles.logoContainer}>
+          <Image variant="logo" src="/images/logo.svg" alt="logo" />
+        </div>
+        <Nav variant="non_mobile" />
+        <div className={imageStyles.cartProfileContainer}>
+          <Image variant="cart" src="/images/icon-cart.svg" alt="cart" />
+          <Image
+            variant="profile"
+            src="/images/image-avatar.png"
+            alt="profile"
+          />
+        </div>
       </Header>
       <Main>
         <Caroussel>caroussel</Caroussel>
