@@ -1,14 +1,58 @@
+@import "../../utils/breakpoints/breakpoints.scss";
+
+.logoContainer {
+  height: 100%;
+  width: 60%;
+
+  display: flex;
+  align-items: center;
+
+  background-color: red;
+  @include xs {
+    width: 25%;
+  }
+
+  @include md {
+    width: clamp(10rem, 20%, 22rem);
+  }
+}
 .logo {
+  // display: none;
+  // @include xs {
+  // padding-right: clamp(3rem, 4rem, 5rem);
+  display: block;
+  height: clamp(1.6rem, 2.25vw, 2rem);
+  // }
+}
+
+.cartProfileContainer {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  background-color: orange;
+  @include xs {
+    width: 20%;
+  }
 }
 
 .cart {
+  margin: 0 5vw 0 0;
+  width: 2rem;
+
+  @include xs {
+    width: clamp(2rem, 2.5vw, 2.75rem);
+  }
 }
 
-.avatar {
+.profile {
+  width: clamp(2.5rem, 4vw, 4rem);
 }
 
-.photo_caroussel {
-}
+// .photo_caroussel {
+// }
 
-.prod_thumbnails {
-}
+// .prod_thumbnails {
+// }

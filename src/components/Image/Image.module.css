@@ -1,1 +1,50 @@
-/*# sourceMappingURL=Image.module.css.map */
+.logoContainer {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  background-color: red;
+}
+@media (min-width: 476px) {
+  .logoContainer {
+    width: 25%;
+  }
+}
+@media (min-width: 712px) {
+  .logoContainer {
+    width: clamp(10rem, 20%, 22rem);
+  }
+}
+
+.logo {
+  display: block;
+  height: clamp(1.6rem, 2.25vw, 2rem);
+}
+
+.cartProfileContainer {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: orange;
+}
+@media (min-width: 476px) {
+  .cartProfileContainer {
+    width: 20%;
+  }
+}
+
+.cart {
+  margin: 0 5vw 0 0;
+  width: 2rem;
+}
+@media (min-width: 476px) {
+  .cart {
+    width: clamp(2rem, 2.5vw, 2.75rem);
+  }
+}
+
+.profile {
+  width: clamp(2.5rem, 4vw, 4rem);
+}/*# sourceMappingURL=Image.module.css.map */

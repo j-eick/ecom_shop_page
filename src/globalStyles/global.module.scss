@@ -41,6 +41,8 @@
   --fontColor_company_mobile: var(--orange); // mobile
   --fontWeight_company_mobile: 700; // mobile
 
+  --fontColor_categories-mobile: var(--dark_grayish_blue);
+
   --fontSize_product-title: 4rem; // wide
   --fontWeight_product-title: 700; // wide
   --fontSize_product-title_mobile: 2.5rem; // mobile
@@ -127,13 +129,14 @@ html {
 
 body {
   min-height: 100vh;
-  // padding: 20px 20px;
-  display: flex;
+
+  display: grid;
+  justify-items: center;
   line-height: 1.5;
 
   font-size: var(--fontSize_s);
   color: black;
-  background-color: rgba(0, 0, 0, 0.778);
+  background-color: var(--backgroundColor);
 
   -webkit-font-smoothing: antialiased;
 }
@@ -143,6 +146,8 @@ a:not([class]) {
 }
 
 li {
+  display: grid;
+  place-items: center;
   list-style: none;
 }
 

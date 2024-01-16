@@ -7,10 +7,14 @@
 .page {
   position: relative;
   min-height: 100dvh;
-  background-color: var(--backgroundColor);
+  max-width: 100rem;
 
   display: grid;
   grid-template-columns: 1fr;
+
+  background-color: var(--backgroundColor);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 
   .cover {
     position: absolute;

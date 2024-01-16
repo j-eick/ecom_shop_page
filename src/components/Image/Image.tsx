@@ -12,7 +12,7 @@ export default function Logo({ src, alt, width, variant }: imgProps) {
   const styleClasses = classNames({
     [styles.logo]: variant === "logo",
     [styles.cart]: variant === "cart",
-    [styles.avatar]: variant === "avatar",
+    [styles.profile]: variant === "profile",
     [styles.photo_caroussel]: variant === "photo_caroussel",
     [styles.prod_thumbnails]: variant === "prod_thumbnails",
     [styles.default]: !variant,

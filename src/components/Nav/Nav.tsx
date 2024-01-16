@@ -1,13 +1,14 @@
 import styles from "./Nav.module.scss";
 import navElems from "../../utils/nav.json";
 import classNames from "classnames";
+import { FaAngleRight } from "react-icons/fa";
 
 type NavProps = {
   variant?: string;
-  isSidemenuOpen: boolean;
+  // isSidemenuOpen: boolean;
 };
 
-export default function Nav({ variant, isSidemenuOpen }: NavProps) {
+export default function Nav({ variant }: NavProps) {
   const classStyles = classNames({
     // [styles.closed]: !isSidemenuOpen,
     // [styles.open]: isSidemenuOpen,
@@ -17,6 +18,7 @@ export default function Nav({ variant, isSidemenuOpen }: NavProps) {
 
   return (
     <nav className={classStyles}>
+      <span className={styles.start} />
       <ul className={styles.ul}>
         {navElems.map((item, index) => (
           <li className={styles.li} key={index}>
@@ -24,6 +26,9 @@ export default function Nav({ variant, isSidemenuOpen }: NavProps) {
           </li>
         ))}
       </ul>
+      <span className={styles.end}>
+        <FaAngleRight />
+      </span>
     </nav>
   );
 }
