@@ -47,4 +47,12 @@
 
 .profile {
   width: clamp(2.5rem, 4vw, 4rem);
+}
+
+.caroussel {
+  background-color: lightgreen;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }/*# sourceMappingURL=Image.module.css.map */

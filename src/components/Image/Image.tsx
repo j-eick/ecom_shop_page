@@ -13,7 +13,7 @@ export default function Logo({ src, alt, width, variant }: imgProps) {
     [styles.logo]: variant === "logo",
     [styles.cart]: variant === "cart",
     [styles.profile]: variant === "profile",
-    [styles.photo_caroussel]: variant === "photo_caroussel",
+    [styles.caroussel]: variant === "caroussel",
     [styles.prod_thumbnails]: variant === "prod_thumbnails",
     [styles.default]: !variant,
   });
