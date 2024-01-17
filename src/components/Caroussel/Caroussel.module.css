@@ -1,8 +1,35 @@
 .caroussel {
-  background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
-  background-size: 100%;
-  background-position-y: -3rem;
+  position: sticky;
   height: 25rem;
   width: 100%;
-  border: 1px solid red;
+  background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -3rem;
+}
+.caroussel .back {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.caroussel .next {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
 }/*# sourceMappingURL=Caroussel.module.css.map */

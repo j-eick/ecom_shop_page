@@ -1,86 +1,42 @@
 .caroussel {
-  background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
-  background-size: 100%;
-  background-position-y: -3rem;
+  position: sticky;
   height: 25rem;
   width: 100%;
-  border: 1px solid red;
 
-  //   @include mobile {
-  //     height: 320px;
-  //     display: grid;
-  //     align-items: center;
-  //     grid-template-columns: repeat(15, 1fr);
+  background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -3rem;
 
-  //     background-image: url("../../../images/prodPictures/image-product-1.jpg");
-  //     background-size: 100%;
-  //   }
+  .back {
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
 
-  //   @include wide {
-  //     height: 400px;
-  //     display: grid;
-  //     align-items: center;
-  //     grid-template-columns: repeat(15, 1fr);
+    display: grid;
+    place-items: center;
 
-  //     background-image: url("../../../images/prodPictures/image-product-1.jpg");
-  //     background-size: 100%;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-  //     border-radius: 20px;
-  //   }
-  // }
+  .next {
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
 
-  // .previous {
-  //   @include mobile {
-  //     width: 45px;
-  //     height: 45px;
-  //     grid-column: 2;
-  //     display: grid;
-  //     place-items: center;
+    display: grid;
+    place-items: center;
 
-  //     border-radius: 50%;
-  //     border: none;
-  //     outline: none;
-  //     cursor: pointer;
-
-  //     background-color: white;
-
-  //     &::before {
-  //       position: absolute;
-  //       z-index: 10;
-  //       content: "";
-  //       background-image: url("../../../public/images/icon-previous.svg");
-  //       background-size: cover;
-  //       transform: scale(0.35);
-  //       height: 45px;
-  //       width: 30px;
-  //     }
-  //   }
-  //   @include wide {
-  //   }
-  // }
-
-  // .next {
-  //   @include mobile {
-  //     width: 45px;
-  //     height: 45px;
-  //     grid-column: 14;
-  //     display: grid;
-  //     place-items: center;
-
-  //     border-radius: 50%;
-  //     border: none;
-  //     outline: none;
-  //     cursor: pointer;
-
-  //     background-color: white;
-
-  //     &::before {
-  //       content: "";
-  //       background-image: url("../../../public/images/icon-next.svg");
-  //       background-size: cover;
-  //       transform: scale(0.35);
-  //       height: 45px;
-  //       width: 30px;
-  //     }
-  //   }
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }

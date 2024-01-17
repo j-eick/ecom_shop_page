@@ -1,7 +1,7 @@
 // import Image from "../Image/Image";
 import styles from "./Caroussel.module.scss";
 import { useState } from "react";
-import Image from "../Image/Image";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
 // type CarousselProps = {
 //   children: ReactNode;
@@ -12,11 +12,12 @@ export default function Caroussel() {
 
   return (
     <div className={styles.caroussel}>
-      {/* <Image
-        variant="caroussel"
-        src="/images/prodPictures/image-product-1.jpg"
-        alt="photo_caroussel"
-      /> */}
+      <span className={styles.back}>
+        <FaAngleLeft />
+      </span>
+      <span className={styles.next}>
+        <FaAngleRight />
+      </span>
     </div>
   );
 }
