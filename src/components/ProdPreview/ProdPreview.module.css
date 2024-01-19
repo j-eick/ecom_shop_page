@@ -1,0 +1,12 @@
+.prodPreview {
+  display: none;
+}
+@media (min-width: 645px) {
+  .prodPreview {
+    height: 110px;
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    gap: 40px;
+  }
+}/*# sourceMappingURL=ProdPreview.module.css.map */

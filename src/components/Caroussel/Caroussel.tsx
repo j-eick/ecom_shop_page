@@ -3,6 +3,8 @@ import styles from "./Caroussel.module.scss";
 import { useEffect, useState } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { prodPhotos } from "../../utils/products.tsx";
+import ProdPreview from "../ProdPreview/ProdPreview.tsx";
+import Image from "../Image/Image.tsx";
 
 // type CarousselProps = {
 //   prodImages: ReactNode[];
@@ -50,24 +52,48 @@ export default function Caroussel() {
   }, [counter, allPhotos.length]);
 
   return (
-    <div
-      className={styles.caroussel}
-      style={{
-        backgroundImage: `url("../../../public/images/prodPictures/${currentImage}")`,
-      }}
-    >
-      <span
-        className={styles.back}
-        onClick={() => setCounter((counter - 1) % (allPhotos.length + 1))}
+    <div className={styles.carousselContainer}>
+      <div
+        className={styles.caroussel}
+        style={{
+          backgroundImage: `url("../../../public/images/prodPictures/${currentImage}")`,
+        }}
       >
-        <FaAngleLeft />
-      </span>
-      <span
-        className={styles.next}
-        onClick={() => setCounter((counter + 1) % (allPhotos.length + 1))}
-      >
-        <FaAngleRight />
-      </span>
+        <span
+          className={styles.back}
+          onClick={() => setCounter((counter - 1) % (allPhotos.length + 1))}
+        >
+          <FaAngleLeft />
+        </span>
+        <span
+          className={styles.next}
+          onClick={() => setCounter((counter + 1) % (allPhotos.length + 1))}
+        >
+          <FaAngleRight />
+        </span>
+      </div>
+      <ProdPreview>
+        <Image
+          variant="prod_thumbnails"
+          src="/images/prodThumbnails/image-product-1-thumbnail.jpg"
+          alt="prodPhoto_1"
+        />
+        <Image
+          variant="prod_thumbnails"
+          src="/images/prodThumbnails/image-product-2-thumbnail.jpg"
+          alt="prodPhoto_1"
+        />
+        <Image
+          variant="prod_thumbnails"
+          src="/images/prodThumbnails/image-product-3-thumbnail.jpg"
+          alt="prodPhoto_1"
+        />
+        <Image
+          variant="prod_thumbnails"
+          src="/images/prodThumbnails/image-product-4-thumbnail.jpg"
+          alt="prodPhoto_1"
+        />
+      </ProdPreview>
     </div>
   );
 }
