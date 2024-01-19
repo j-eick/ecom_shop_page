@@ -13,7 +13,6 @@ import SideMenu from "./components/SideMenu/SideMenu";
 // Product Component + Styling
 import Product from "./components/Product/Product";
 import productStyle from "./components/Product/Product.module.scss";
-
 import { useState } from "react";
 
 function App() {

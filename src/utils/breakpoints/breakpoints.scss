@@ -1,6 +1,7 @@
 // $screen-xxs-min320: 320px;
 $screen-xs-min476: 476px;
 $screen-sm-min576: 576px;
+$screen-sm1-min645: 645px;
 $screen-md-min712: 712px;
 $screen-lg-min1024: 1024px;
 $screen-xl-min1280: 1280px;
@@ -22,6 +23,12 @@ $screen_wide_min1366: 1366px;
 // Small devices
 @mixin sm {
   @media (min-width: #{$screen-sm-min576}) {
+    @content;
+  }
+}
+// Small devices
+@mixin sm1 {
+  @media (min-width: #{$screen-sm1-min645}) {
     @content;
   }
 }
