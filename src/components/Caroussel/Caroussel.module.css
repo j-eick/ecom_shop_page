@@ -1,8 +1,8 @@
 .caroussel {
   position: sticky;
+  margin-top: clamp(0rem, 0.75vw, 2rem);
   height: 25rem;
-  width: 100%;
-  background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
+  width: clamp(30rem, 100%, 34rem);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -3rem;

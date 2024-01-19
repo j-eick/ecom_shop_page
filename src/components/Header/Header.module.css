@@ -4,7 +4,6 @@
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
-  border: 1px solid black;
 }
 @media (min-width: 476px) {
   .header {
@@ -12,7 +11,6 @@
     height: clamp(5.5rem, 10vw, 10rem);
     display: flex;
     align-items: center;
-    border: 1px solid black;
   }
 }
 @media (min-width: 1024px) {
