@@ -3,7 +3,6 @@
   width: 60%;
   display: flex;
   align-items: center;
-  background-color: red;
 }
 @media (min-width: 476px) {
   .logoContainer {
@@ -27,7 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  background-color: orange;
 }
 @media (min-width: 476px) {
   .cartProfileContainer {
@@ -50,7 +48,6 @@
 }
 
 .caroussel {
-  background-color: lightgreen;
   -o-object-fit: scale-down;
      object-fit: scale-down;
   -o-object-position: 50% 50%;

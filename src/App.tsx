@@ -55,16 +55,14 @@ function App() {
           <h1 className={productStyle.company}>SNEAKER COMPANY</h1>
 
           {/* +++++  PRODUCT TILE  +++++ */}
-          <div className={productStyle.title}>
-            Fall Limited Edition Sneakers
-          </div>
+          <h2 className={productStyle.title}>Fall Limited Edition Sneakers</h2>
 
           {/* +++++  PRODUCT DESCRIPTION  +++++ */}
-          <div className={productStyle.desciption}>
+          <p className={productStyle.desciption}>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
-          </div>
+          </p>
 
           {/* +++++  PRODUCT PRICE  +++++ */}
           <ul className={productStyle.priceContainer}>

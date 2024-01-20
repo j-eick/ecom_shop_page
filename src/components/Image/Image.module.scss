@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
 
-  background-color: red;
+  // background-color: red;
   @include xs {
     width: 25%;
   }
@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: end;
 
-  background-color: orange;
+  // background-color: orange;
   @include xs {
     width: 20%;
   }
@@ -52,7 +52,7 @@
 }
 
 .caroussel {
-  background-color: lightgreen;
+  // background-color: lightgreen;
   object-fit: scale-down;
   object-position: 50% 50%;
 }

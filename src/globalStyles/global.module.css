@@ -32,7 +32,7 @@
   --fontColor_categories-mobile: var(--dark_grayish_blue);
   --fontSize_product-title: 4rem;
   --fontWeight_product-title: 700;
-  --fontSize_product-title_mobile: 2.5rem;
+  --fontSize_product-title_mobile: var(--fontSize_xl);
   --fontWeight_product-title_mobile: 700;
   --fontSize_description: var(--fontSize_s);
   --fontColor_description: var(--dark_grayish_blue);
@@ -137,4 +137,10 @@ blockquote,
 dl,
 dd {
   margin-block-end: 0;
+}
+
+h1,
+h1 + h2,
+h2 + p {
+  padding-bottom: 1.25rem;
 }/*# sourceMappingURL=global.module.css.map */

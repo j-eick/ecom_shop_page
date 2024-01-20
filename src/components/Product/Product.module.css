@@ -1,5 +1,6 @@
 .product {
-  padding: 0px 20px;
+  width: 100%;
+  padding: 0 clamp(1.5rem, 3vw, 3rem);
 }
 
 .company {
@@ -10,42 +11,55 @@
 
 .title {
   font-size: var(--fontSize_product-title_mobile);
+  font-weight: var(--fontWeight_company);
+  line-height: 1.2;
 }
 
 .desciption {
-  margin-top: 20px;
   font-size: var(--fontSize_description);
   color: var(--fontColor_description);
   line-height: 1.6;
 }
 
 .priceContainer {
-  margin-top: 20px;
-  font-size: var(--fontSize_price);
+  display: flex;
+  align-items: center;
   font-weight: var(--fontWeight_price);
+}
+.priceContainer .price {
+  margin-right: clamp(1.5rem, 5vw, 3rem);
+  display: flex;
+  align-items: center;
+  font-size: var(--fontSize_xl);
 }
 .priceContainer .discount {
   padding: 2px 8px;
+  display: flex;
+  place-items: center;
   background-color: var(--pale_orange);
   border-radius: 7px;
-  font-size: var(--fontSize_discount);
+  font-size: var(--fontSize-m);
   color: var(--orange);
 }
 .priceContainer .formerPrice {
-  font-size: var(--fontSize_formerPrice);
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  font-size: var(--fontSize-m);
   font-weight: var(--fontWeight_700);
   color: var(--grayish_blue);
   text-decoration: line-through;
 }
 
 .checkout {
-  margin-top: 25px;
+  margin-top: 1rem;
   margin-bottom: 50px;
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   gap: 15px;
 }
 .checkout .ulCounterContainer {
-  width: 70px;
   display: flex;
   justify-content: space-around;
   background-color: var(--light_grayish_blue);

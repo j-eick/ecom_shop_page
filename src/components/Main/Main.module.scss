@@ -1,9 +1,13 @@
 .main {
   position: relative;
+  height: 100dvh;
+
   display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(30.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31.5rem, 1fr));
   gap: var(--gutter, var(--space-s-l));
 
-  background-color: var(--white);
+  overflow: hidden;
+
+  // background-color: var(--white);
+  border: 3px solid red;
 }

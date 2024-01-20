@@ -45,7 +45,7 @@
 
   --fontSize_product-title: 4rem; // wide
   --fontWeight_product-title: 700; // wide
-  --fontSize_product-title_mobile: 2.5rem; // mobile
+  --fontSize_product-title_mobile: var(--fontSize_xl); // mobile
   --fontWeight_product-title_mobile: 700; // mobile
 
   --fontSize_description: var(--fontSize_s);
@@ -167,4 +167,10 @@ blockquote,
 dl,
 dd {
   margin-block-end: 0;
+}
+
+h1,
+h1 + h2,
+h2 + p {
+  padding-bottom: 1.25rem;
 }

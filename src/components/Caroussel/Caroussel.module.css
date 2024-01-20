@@ -5,12 +5,18 @@
   align-items: center;
   overflow: hidden;
 }
+@media (min-width: 645px) {
+  .carousselContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .caroussel {
   position: relative;
-  margin-top: clamp(0rem, 0.75vw, 2rem);
-  height: 25rem;
-  width: clamp(30rem, 100%, 34rem);
+  height: clamp(25rem, 35vh, 35rem);
+  width: clamp(30rem, 100%, 40rem);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -3rem;

@@ -12,7 +12,6 @@
     font-size: var(--fontSize_s);
     font-weight: var(--fontWeight-thin);
     color: var(--fontColor_categories-mobile);
-    background-color: lightgreen;
   }
 }
 @media (min-width: 476px) and (min-width: 712px) {

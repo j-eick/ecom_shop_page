@@ -4,7 +4,6 @@
   width: 10%;
   display: flex;
   place-items: center;
-  background-color: lightblue;
 }
 @media (min-width: 476px) {
   .burgerContainer {
