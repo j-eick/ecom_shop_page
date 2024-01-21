@@ -2,12 +2,16 @@
 
 .prodPreview {
   display: none;
-  @include sm1 {
-    height: 110px;
-    width: 100%;
-    padding-top: 40px;
 
-    display: flex;
-    gap: 40px;
+  @include sm1 {
+    padding-top: 2.5rem;
+
+    width: clamp(30rem, 100%, 37rem);
+    height: 110px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+
+    gap: var(--space-s-m);
   }
 }

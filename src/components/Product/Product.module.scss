@@ -1,8 +1,18 @@
+@import "../../utils/breakpoints/breakpoints.scss";
+
 .product {
   width: 100%;
-  padding: 0 clamp(1.5rem, 3vw, 3rem);
-  background-color: lightgreen;
-  // padding: clamp();
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+
+  // background-color: lightgreen;
+
+  @include sm1 {
+    min-height: calc(100dvh - clamp(5.5rem, 10vw, 10rem));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .company {
@@ -10,36 +20,32 @@
   font-weight: var(--fontWeight_company);
   color: var(--fontColor_company);
 
-  // @include mobile {
-  //   margin-top: 20px;
-  //   font-size: var(--fontSize_company_mobile);
-  // }
-  // @include wide {
-  //   margin-top: 80px;
-  //   font-size: var(--fontSize_company);
-  // }
+  @include sm1 {
+    font-size: var(--fontSize_company_desktop);
+  }
 }
 
 .title {
-  font-size: var(--fontSize_product-title_mobile);
+  font-size: var(--fontSize_product-title);
   font-weight: var(--fontWeight_company);
   line-height: 1.2;
-  // @include mobile {
-  //   margin-top: 10px;
-  //   font-size: var(--fontSize_product-title_mobile);
-  //   font-weight: var(--fontWeight_product-title);
-  // }
-  // @include wide {
-  //   margin-top: 20px;
-  //   font-size: var(--fontSize_product-title);
-  //   font-weight: var(--fontWeight_product-title);
-  // }
+
+  @include sm1 {
+    font-size: var(--fontSize_product-title_mobile);
+  }
+  @include md2 {
+    font-size: var(--fontSize_product-title_mobile_2);
+  }
 }
 
 .desciption {
   font-size: var(--fontSize_description);
   color: var(--fontColor_description);
   line-height: 1.6;
+
+  @include sm1 {
+    font-size: var(--fontSize_description_desktop);
+  }
 }
 
 .priceContainer {
@@ -47,21 +53,16 @@
   align-items: center;
   font-weight: var(--fontWeight_price);
 
-  // @include mobile {
-  //   display: flex;
-  //   align-items: center;
-  //   // grid-template-columns: repeat(10, 1fr);
-  //   grid-template-rows: repeat(2, 1fr);
-  // }
-  // @include wide {
-  //   display: grid;
-  //   align-items: center;
-  //   grid-template-columns: repeat(8, 1fr);
-  //   grid-template-rows: repeat(2, 1fr);
-  //   grid-template-areas:
-  //     "price price discount discount discount discount discount discount"
-  //     "formerPrice formerPrice formerPrice formerPrice formerPrice formerPrice formerPrice formerPrice";
-  // }
+  @include sm1 {
+    width: 50%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "price discount" "formerPrice formerPrice";
+
+    line-height: 1.2;
+  }
 
   .price {
     margin-right: clamp(1.5rem, 5vw, 3rem);
@@ -69,26 +70,32 @@
     display: flex;
     align-items: center;
 
-    font-size: var(--fontSize_xl);
+    font-size: var(--fontSize_l);
+
+    @include sm1 {
+      grid-area: price;
+      font-size: var(--fontSize_price_desktop);
+    }
   }
 
   .discount {
-    padding: 2px 8px;
+    padding: 0px 7px;
     display: flex;
     place-items: center;
 
     background-color: var(--pale_orange);
     border-radius: 7px;
-    font-size: var(--fontSize-m);
+    font-size: var(--fontSize_discount);
     color: var(--orange);
 
-    // @include mobile {
-    //   grid-row: 1;
-    // }
-    // @include wide {
-    //   grid-area: discount;
-    //   justify-self: start;
-    // }
+    @include sm1 {
+      padding: 2px 8px;
+      display: flex;
+      justify-content: center;
+      grid-area: discount;
+
+      font-size: var(--fontSize_discount_desktop);
+    }
   }
 
   .formerPrice {
@@ -102,15 +109,11 @@
 
     text-decoration: line-through;
 
-    // @include mobile {
-    //   width: calc(335px - 47px - 106px);
-    //   text-align: right;
-    // }
-    // @include wide {
-    //   grid-area: formerPrice;
-    //   justify-self: start;
-    //   text-align: left;
-    // }
+    @include sm1 {
+      grid-area: formerPrice;
+      justify-content: start;
+      font-size: var(--fontSize_formerPrice_desktop);
+    }
   }
 }
 

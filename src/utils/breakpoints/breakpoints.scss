@@ -1,8 +1,10 @@
 // $screen-xxs-min320: 320px;
 $screen-xs-min476: 476px;
 $screen-sm-min576: 576px;
-$screen-sm1-min645: 645px;
+$screen-sm1-min650: 650px;
+$screen-md1-min768: 768px;
 $screen-md-min712: 712px;
+$screen-md-min972: 972px;
 $screen-lg-min1024: 1024px;
 $screen-xl-min1280: 1280px;
 $screen_wide_min1366: 1366px;
@@ -28,13 +30,25 @@ $screen_wide_min1366: 1366px;
 }
 // Small devices
 @mixin sm1 {
-  @media (min-width: #{$screen-sm1-min645}) {
+  @media (min-width: #{$screen-sm1-min650}) {
     @content;
   }
 }
 // Small devices
 @mixin md {
   @media (min-width: #{$screen-md-min712}) {
+    @content;
+  }
+}
+// Small devices
+@mixin md1 {
+  @media (min-width: #{$screen-md1-min768}) {
+    @content;
+  }
+}
+// Small devices
+@mixin md2 {
+  @media (min-width: #{$screen-md-min972}) {
     @content;
   }
 }

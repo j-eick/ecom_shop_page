@@ -46,7 +46,6 @@
   .ul {
     display: none;
     @include xs {
-      background-color: lightcyan;
       position: relative;
       width: 100%;
 
@@ -58,6 +57,8 @@
       font-size: var(--fontSize_xs);
       overflow-x: scroll;
       line-height: 1.1;
+
+      // background-color: lightcyan;
     }
   }
 }

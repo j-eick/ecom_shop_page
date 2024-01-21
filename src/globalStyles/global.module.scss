@@ -29,35 +29,45 @@
   --fontWeight-thin: 400;
   --fontWeight-thick: 700;
 
+  // FONTS--NAV / CATEGORY
   --fontSize_nav: var(--font_standard);
   --fontSize_button: var(--font_standard);
   --fontSize_price: 22px;
-
-  // FONTS--PRODUCT
-  --fontSize_company: var(--fontSize_s); // wide
-  --fontColor_company: var(--orange); // wide
-  --fontWeight_company: 700; // wide
-  --fontSize_company_mobile: 15px; // mobile
-  --fontColor_company_mobile: var(--orange); // mobile
-  --fontWeight_company_mobile: 700; // mobile
-
   --fontColor_categories-mobile: var(--dark_grayish_blue);
 
-  --fontSize_product-title: 4rem; // wide
-  --fontWeight_product-title: 700; // wide
-  --fontSize_product-title_mobile: var(--fontSize_xl); // mobile
-  --fontWeight_product-title_mobile: 700; // mobile
+  // FONTS-----------PRODUCT
+  // FONTS----Company
+  --fontColor_company: var(--orange);
+  --fontWeight_company: 700;
+  --fontSize_company: var(--fontSize_s);
+  --fontSize_company_desktop: var(--fontSize_xs);
 
-  --fontSize_description: var(--fontSize_s);
+  // FONTS----Title
+  --fontSize_product-title: var(--fontSize_xl);
+  --fontSize_product-title_mobile: var(--fontSize_l);
+  --fontSize_product-title_mobile_2: var(--fontSize_xl);
+  --fontWeight_product-title: 700;
+  --fontWeight_product-title_mobile: 700;
+
+  // FONTS----Description
   --fontColor_description: var(--dark_grayish_blue);
+  --fontSize_description: var(--fontSize_s);
+  --fontSize_description_desktop: var(--fontSize_xs);
 
-  --fontSize_price: 28px;
+  // FONTS----Price
+  --fontSize_price: var(--fontSize_xs);
+  --fontSize_price_desktop: var(--fontSize_l);
   --fontWeight_price: var(--fontWeight_700);
-  --fontSize_discount: 16px;
-  --fontWeight_discount: var(--fontWeight_700);
 
-  --fontSize_formerPrice: 15px;
+  // FONTS----Discount
+  --fontWeight_discount: var(--fontWeight_700);
+  --fontSize_discount: var(--fontSize_s);
+  --fontSize_discount_desktop: var(--fontSize_xs);
+
+  // FONTS----FormerPrice
   --fontWeight_formerPrice: var(--fontWeight_700);
+  --fontSize_formerPrice: 15px;
+  --fontSize_formerPrice_desktop: var(--fontSize_s);
 
   --fontSize_counter: 13px;
   --fontWeight_counter: var(--fontWeight_700);
@@ -169,8 +179,12 @@ dd {
   margin-block-end: 0;
 }
 
+h1 {
+  margin-top: 1.5rem;
+}
+
 h1,
 h1 + h2,
 h2 + p {
-  padding-bottom: 1.25rem;
+  padding-bottom: 2rem;
 }

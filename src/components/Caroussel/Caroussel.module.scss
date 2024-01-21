@@ -2,30 +2,44 @@
 
 .carousselContainer {
   width: 100%;
-  height: 30rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 
-  background-color: lightskyblue;
+  // background-color: lightskyblue;
 
   @include sm1 {
+    // width: clamp(30rem, 100%, 37rem);
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    overflow: hidden;
+    // background-color: yellow;
   }
 }
 
 .caroussel {
   position: relative;
   // margin-top: clamp(0rem, 0.5vw * 1.5, 2rem);
-  height: clamp(25rem, 35vh, 35rem);
-  width: clamp(30rem, 100%, 40rem);
+  height: clamp(25rem, 40vh, 30rem);
+  width: clamp(30rem, 100%, 37rem);
 
+  // backgroundImage: `url("../../../public/images/prodPictures/${currentImage}")`,
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -3rem;
+
+  @include sm1 {
+    height: clamp(25rem, 45vh, 40rem);
+    width: clamp(30rem, 100%, 37rem);
+    background-size: cover;
+    background-position-y: 0;
+
+    border-radius: 1.3rem;
+  }
 
   .back {
     position: absolute;

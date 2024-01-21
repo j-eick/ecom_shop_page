@@ -1,13 +1,20 @@
+@import "../../utils/breakpoints/breakpoints.scss";
+
 .main {
   position: relative;
-  height: 100dvh;
+  height: calc(100dvh - clamp(5.5rem, 10vw, 10rem));
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(31.5rem, 1fr));
-  gap: var(--gutter, var(--space-s-l));
+  grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
+  grid-template-rows: auto 1fr auto;
+  // gap: var(--gutter, var(--space-s-l));
 
-  overflow: hidden;
+  // overflow: hidden;
 
   // background-color: var(--white);
-  border: 3px solid red;
+  // border: 3px solid red;
+
+  // @include sm1 {
+  //   grid-template-columns: 1fr;
+  // }
 }
