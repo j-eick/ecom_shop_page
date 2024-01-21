@@ -1,11 +1,22 @@
 @import "../../utils/breakpoints/breakpoints.scss";
 
+// .dialog {
+//   height: 10rem;
+//   width: 10rem;
+//   background-color: white;
+// }
+
 .open {
   position: absolute;
-  z-index: 15;
+  // padding: 7rem clamp(1rem, 6vw, 4rem);
+
   width: 70%;
   height: 100%;
 
+  // display: flex;
+  // flex-direction: column;
+
+  z-index: 15;
   background-color: var(--backgroundColor);
 }
 
@@ -36,39 +47,3 @@
     transform: translateX(-200px);
   }
 }
-
-// @include mobile {
-//   position: fixed;
-//   height: 667px;
-
-//   background-color: rgb(255, 255, 255);
-
-//   transition: 0.4s ease-out;
-
-//   font-weight: var(--fontWeight_sideMenu);
-//   z-index: 20;
-
-//   &.close {
-//     width: 0px;
-//     opacity: 0;
-
-//     .back_icon {
-//       display: none;
-//       position: absolute;
-//       top: 20px;
-//       left: 20px;
-//     }
-//   }
-//   &.open {
-//     width: 260px;
-//     opacity: 1;
-//     transform: translateX(-0.5px);
-
-//     .back_icon {
-//       display: block;
-//       position: absolute;
-//       top: 15px;
-//       left: 15px;
-//     }
-//   }
-// }

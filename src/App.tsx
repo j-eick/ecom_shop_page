@@ -26,8 +26,15 @@ function App() {
      */
     <Page>
       {isSidemenuOpen && <span className={pageStyles.cover} />}
-      <SideMenu isSideMenuOpen={isSidemenuOpen}>
-        <Nav variant="mobile" />
+      {/* ######   onCloseSidemenu   ####
+      
+          - onCloseSidemenu is passed from child (SideMenu-Comp) 
+          - onCloseSidemenu passes a boolean value to state-setter: setIsSidemenuOpen()   */}
+      <SideMenu
+        isSideMenuOpen={isSidemenuOpen}
+        onCloseSidemenu={(closeSidemenu) => setIsSidemenuOpen(closeSidemenu)}
+      >
+        <Nav variant="mobile" isSidemenuOpen={isSidemenuOpen} />
       </SideMenu>
       {/* ##############   HEADER   #################  */}
       <Header>

@@ -5,19 +5,19 @@ import { FaAngleRight } from "react-icons/fa";
 
 type NavProps = {
   variant?: string;
-  // isSidemenuOpen: boolean;
+  isSidemenuOpen?: boolean;
 };
 
-export default function Nav({ variant }: NavProps) {
+export default function Nav({ variant, isSidemenuOpen }: NavProps) {
   const classStyles = classNames({
-    // [styles.closed]: !isSidemenuOpen,
-    // [styles.open]: isSidemenuOpen,
+    [styles.closed]: !isSidemenuOpen,
+    [styles.open]: isSidemenuOpen,
     [styles.navMobile]: variant === "mobile",
     [styles.navWide]: variant === "non_mobile",
   });
 
   return (
-    <nav className={classStyles}>
+    <nav className={classStyles} data-sidemenu={isSidemenuOpen}>
       <span className={styles.start} />
       <ul className={styles.ul}>
         {navElems.map((item, index) => (
@@ -26,9 +26,11 @@ export default function Nav({ variant }: NavProps) {
           </li>
         ))}
       </ul>
-      <span className={styles.end}>
-        <FaAngleRight />
-      </span>
+      {!isSidemenuOpen && (
+        <span className={styles.end}>
+          <FaAngleRight />
+        </span>
+      )}
     </nav>
   );
 }
