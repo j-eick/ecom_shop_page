@@ -69,11 +69,13 @@
   --fontSize_formerPrice: 15px;
   --fontSize_formerPrice_desktop: var(--fontSize_s);
 
+  // FONTS----Counter
   --fontSize_counter: 13px;
   --fontWeight_counter: var(--fontWeight_700);
 
-  --fontSize_cartButton: 13px;
-  --fontWeight_counter: var(--fontWeight_700);
+  // FONTS----CartButton
+  --fontSize_cartButton: var(--fontSize_m);
+  --fontWeight_cartButton: var(--fontWeight_700);
 
   // FONT--WEIGHT
   --fontWeight_sideMenu: 700;

@@ -41,6 +41,8 @@
 .cart {
   margin: 0 5vw 0 0;
   width: 2rem;
+  font-size: var(--fontSize_cartButton);
+  font-weight: var(--fontWeight_cartButton);
 
   @include xs {
     width: clamp(2rem, 2.5vw, 2.75rem);

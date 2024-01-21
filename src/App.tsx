@@ -96,7 +96,12 @@ function App() {
             </ul>
             <Button variant="addToCart" iconSrc="/images/icon-cart.svg">
               {/* <span icon="addToCartIcon" /> */}
-              <Image src="/images/icon-cart.svg" alt="cart_icon" width={16} />
+              <Image
+                variant="cart"
+                src="/images/icon-cart.svg"
+                alt="cart_icon"
+                width={16}
+              />
               Add to cart
             </Button>
           </div>
