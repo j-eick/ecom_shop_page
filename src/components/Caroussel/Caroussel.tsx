@@ -1,55 +1,47 @@
 // import Image from "../Image/Image";
 import styles from "./Caroussel.module.scss";
+import stylesProdPreview from "../ProdPreview/ProdPreview.module.scss";
 import { useEffect, useState } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-import { prodPhotos } from "../../utils/products.tsx";
+import { products } from "../../utils/products.tsx";
 import ProdPreview from "../ProdPreview/ProdPreview.tsx";
 import Image from "../Image/Image.tsx";
+import stylesImage from "../Image/Image.module.scss";
 
 // type CarousselProps = {
-//   prodImages: ReactNode[];
+//   // prodImages: ReactNode[];
 // };
 
 console.clear();
 
 export default function Caroussel() {
   const [counter, setCounter] = useState<number>(1);
-  const [allPhotos] = useState(prodPhotos);
-  // const [previousPhoto, setPreviousPhoto] = useState<number | null>(null);
-  const [currentImage, setCurrentImage] = useState(allPhotos[0]);
-
-  // start = 1
-  // end = allPhotos.length
-  // if counter = 1, "back" => 0 =>
+  const [allProducts] = useState(products);
+  const [currentImage, setCurrentImage] = useState("");
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>();
+  const [currentThumbnail, setCurrentThumbnail] = useState("");
+  const [currentThumbnailIndex, setCurrentThumbnailIndex] = useState<number>();
 
   useEffect(() => {
-    // const count = (num: number = 1) => {
-    //   let lastPos: number | null = num;
-    //   let newPos: number = lastPos + 1;
-
-    //   return newPos;
-    // };
-    // count(-1);
-
     const handleBackNextButton = (counter: number) => {
-      let prevPic: number | null;
-
-      for (let i = 1; i <= allPhotos.length; i++) {
-        prevPic = allPhotos.length;
+      for (let i = 1; i <= allProducts.length; i++) {
+        // prevPic = allProducts.length;
         if (i === counter) {
           setCurrentImage(`image-product-${i}.jpg`);
+          setCurrentImageIndex(i);
+          setCurrentThumbnail(`image-product-${i}-thumbnail.jpg`);
+          setCurrentThumbnailIndex(i);
           break;
         }
-        // caroussel shows pictures backwards in full circle
-        // if (counter === 0) {
-        //   setCounter(allPhotos.length);
-        // }
       }
-      console.log(counter);
     };
 
     handleBackNextButton(counter);
-  }, [counter, allPhotos.length]);
+  }, [counter, allProducts.length]);
+
+  const handlePreviewPhoto = (e: React.MouseEvent<HTMLImageElement>) => {
+    console.log(e);
+  };
 
   return (
     <div className={styles.carousselContainer}>
@@ -61,38 +53,45 @@ export default function Caroussel() {
       >
         <span
           className={styles.back}
-          onClick={() => setCounter((counter - 1) % (allPhotos.length + 1))}
+          onClick={() => setCounter((counter - 1) % (allProducts.length + 1))}
         >
           <FaAngleLeft />
         </span>
         <span
           className={styles.next}
-          onClick={() => setCounter((counter + 1) % (allPhotos.length + 1))}
+          onClick={() => setCounter((counter + 1) % (allProducts.length + 1))}
         >
           <FaAngleRight />
         </span>
       </div>
       <ProdPreview>
-        <Image
-          variant="prod_thumbnails"
-          src="/images/prodThumbnails/image-product-1-thumbnail.jpg"
-          alt="prodPhoto_1"
-        />
-        <Image
-          variant="prod_thumbnails"
-          src="/images/prodThumbnails/image-product-2-thumbnail.jpg"
-          alt="prodPhoto_1"
-        />
-        <Image
-          variant="prod_thumbnails"
-          src="/images/prodThumbnails/image-product-3-thumbnail.jpg"
-          alt="prodPhoto_1"
-        />
-        <Image
-          variant="prod_thumbnails"
-          src="/images/prodThumbnails/image-product-4-thumbnail.jpg"
-          alt="prodPhoto_1"
-        />
+        <ul className={stylesProdPreview.ul}>
+          {products.map((product) => (
+            <li key={product.id}>
+              {currentImageIndex !== product.id ? (
+                <Image
+                  variant="prod_thumbnails"
+                  src={`/images/prodThumbnails/${product.thumbnail}`}
+                  alt="prodPhoto_1"
+                  onClick={(e: React.MouseEvent<HTMLImageElement>) =>
+                    handlePreviewPhoto(e)
+                  }
+                />
+              ) : (
+                <div className={stylesImage.activeLi}>
+                  <Image
+                    variant="prod_thumbnails_active"
+                    src={`/images/prodThumbnails/${product.thumbnail}`}
+                    alt="prodPhoto_1"
+                    onClick={(e: React.MouseEvent<HTMLImageElement>) =>
+                      handlePreviewPhoto(e)
+                    }
+                  />
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
       </ProdPreview>
     </div>
   );
