@@ -19,8 +19,8 @@ export default function Caroussel() {
   const [allProducts] = useState(products);
   const [currentImage, setCurrentImage] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState<number>();
-  const [currentThumbnail, setCurrentThumbnail] = useState("");
-  const [currentThumbnailIndex, setCurrentThumbnailIndex] = useState<number>();
+  // const [currentThumbnail, setCurrentThumbnail] = useState("");
+  // const [currentThumbnailIndex, setCurrentThumbnailIndex] = useState<number>();
 
   useEffect(() => {
     const handleBackNextButton = (counter: number) => {
@@ -29,8 +29,8 @@ export default function Caroussel() {
         if (i === counter) {
           setCurrentImage(`image-product-${i}.jpg`);
           setCurrentImageIndex(i);
-          setCurrentThumbnail(`image-product-${i}-thumbnail.jpg`);
-          setCurrentThumbnailIndex(i);
+          // setCurrentThumbnail(`image-product-${i}-thumbnail.jpg`);
+          // setCurrentThumbnailIndex(i);
           break;
         }
       }

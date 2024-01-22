@@ -1,5 +1,5 @@
 // $screen-xxs-min320: 320px;
-$screen-xs-min420: 420px;
+$screen-xxs-min420: 420px;
 $screen-xs-min476: 476px;
 $screen-sm-min576: 576px;
 $screen-sm1-min650: 650px;
@@ -19,7 +19,7 @@ $screen_wide_min1366: 1366px;
 
 // Legacy devices
 @mixin xxs {
-  @media (min-width: #{$screen-xs-min420}) {
+  @media (min-width: #{$screen-xxs-min420}) {
     @content;
   }
 }
