@@ -6,7 +6,7 @@ type imgProps = {
   alt: string;
   width?: number;
   variant?: string;
-  onClick?: () => void | boolean;
+  onClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 };
 
 export default function Logo({ src, alt, width, variant, onClick }: imgProps) {
@@ -16,6 +16,7 @@ export default function Logo({ src, alt, width, variant, onClick }: imgProps) {
     [styles.profile]: variant === "profile",
     [styles.caroussel]: variant === "caroussel",
     [styles.prod_thumbnails]: variant === "prod_thumbnails",
+    [styles.prod_thumbnails_active]: variant === "prod_thumbnails_active",
     [styles.closeIcon]: variant === "closeIcon",
     [styles.default]: !variant,
   });
