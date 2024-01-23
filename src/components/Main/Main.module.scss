@@ -6,16 +6,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32.5rem, 1fr));
-  grid-template-rows: auto 1fr auto;
-  // gap: var(--gutter, var(--space-s-l));
+  // grid-template-rows: auto 1fr auto;
+  gap: 0;
   align-items: center;
-
-  // overflow: hidden;
-
-  // background-color: var(--white);
-  // border: 3px solid red;
-
-  // @include sm1 {
-  //   grid-template-columns: 1fr;
-  // }
 }

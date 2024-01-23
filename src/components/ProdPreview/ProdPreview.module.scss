@@ -13,7 +13,9 @@
     grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
     gap: var(--space-s-m);
 
-    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     // border: 2px solid black;
   }
@@ -21,6 +23,10 @@
     display: flex;
     justify-content: space-evenly;
     gap: 0 1.5rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .li {
       border: 2px solid orange;

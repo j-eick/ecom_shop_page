@@ -40,7 +40,7 @@ export default function Caroussel() {
   }, [counter, allProducts.length]);
 
   const handlePreviewPhoto = (e: React.MouseEvent<HTMLImageElement>) => {
-    console.log(e);
+    // code
   };
 
   return (

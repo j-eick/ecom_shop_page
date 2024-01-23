@@ -72,8 +72,15 @@
       gap: clamp(0.5rem, 0.75rem, 2rem) clamp(1rem, 3vw, 10rem);
 
       font-size: var(--fontSize_xs);
-      overflow-x: scroll;
       line-height: 1.1;
+
+      overflow-x: scroll;
+      scrollbar-width: none; // hide for IE & Edge
+      -ms-overflow-style: none; // hide for Firefox
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       // background-color: lightcyan;
     }
