@@ -39,9 +39,9 @@ export default function Caroussel() {
     handleBackNextButton(counter);
   }, [counter, allProducts.length]);
 
-  const handlePreviewPhoto = (e: React.MouseEvent<HTMLImageElement>) => {
-    console.log(e);
-  };
+  // const handlePreviewPhoto = (e: React.MouseEvent<HTMLImageElement>) => {
+  //   console.log(e);
+  // };
 
   return (
     <div className={styles.carousselContainer}>
@@ -73,9 +73,9 @@ export default function Caroussel() {
                   variant="prod_thumbnails"
                   src={`/images/prodThumbnails/${product.thumbnail}`}
                   alt="prodPhoto_1"
-                  onClick={(e: React.MouseEvent<HTMLImageElement>) =>
-                    handlePreviewPhoto(e)
-                  }
+                  // onClick={(e: React.MouseEvent<HTMLImageElement>) =>
+                  //   handlePreviewPhoto(e)
+                  // }
                 />
               ) : (
                 <div className={stylesImage.activeLi}>
@@ -83,9 +83,9 @@ export default function Caroussel() {
                     variant="prod_thumbnails_active"
                     src={`/images/prodThumbnails/${product.thumbnail}`}
                     alt="prodPhoto_1"
-                    onClick={(e: React.MouseEvent<HTMLImageElement>) =>
-                      handlePreviewPhoto(e)
-                    }
+                    // onClick={(e: React.MouseEvent<HTMLImageElement>) =>
+                    //   handlePreviewPhoto(e)
+                    // }
                   />
                 </div>
               )}
